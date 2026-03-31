@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const iconMap = {
     FaFileAlt: '📄',
@@ -36,14 +36,15 @@ const Tag = ({ tagType, tag }) => {
     );
 };
 
-const ModalCard = ({ item }) => {
-    const [isAdded, setIsAdded] = useState(false);
+const ModalCard = ({ item, carts, setCarts }) => {
+    const [isAdded, setIsAdded] = useState(carts.some(cartItem => cartItem.id === item?.id));
 
     if (!item) return null;
     const { id, tagType, icon, name, description, price, period, features = [], tag } = item;
 
     const handleAddToCart = () => {
         setIsAdded(true);
+        setCarts([...carts, item]);
     };
 
     return (
@@ -79,7 +80,7 @@ const ModalCard = ({ item }) => {
             <button
                 type="button"
                 aria-label={`Buy ${name}`}
-                onClick={handleAddToCart}
+                onClick={() => handleAddToCart(false)}
                 className={`mt-auto w-full py-3 rounded-full text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer flex items-center justify-center ${isAdded
                     ? 'bg-linear-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700'
                     : 'bg-linear-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700'
