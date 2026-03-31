@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "AI Resume Builder",
+    "description": "Create professional resumes with AI-powered suggestions.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "FaFileAlt"
+  },
+  {
+    "id": 2,
+    "name": "Cover Letter Generator",
+    "description": "Generate personalized cover letters instantly.",
+    "price": 4.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["AI writing assistant", "Custom tone", "Multiple formats"],
+    "icon": "FaEnvelopeOpenText"
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Website Builder",
+    "description": "Build stunning portfolio websites with no coding.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Drag & drop editor", "Custom domains", "Responsive design"],
+    "icon": "FaGlobe"
+  },
+  {
+    "id": 4,
+    "name": "LinkedIn Optimizer",
+    "description": "Optimize your LinkedIn profile for better reach.",
+    "price": 7.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Keyword suggestions", "Profile scoring", "Headline generator"],
+    "icon": "FaLinkedin"
+  },
+  {
+    "id": 5,
+    "name": "Interview Prep AI",
+    "description": "Practice interviews with AI mock sessions.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Mock interviews", "Real-time feedback", "Common Q&A bank"],
+    "icon": "FaUserTie"
+  },
+  {
+    "id": 6,
+    "name": "Job Tracker Pro",
+    "description": "Track and manage all your job applications easily.",
+    "price": 5.99,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Application tracking", "Status updates", "Deadline alerts"],
+    "icon": "FaTasks"
+  },
+  {
+    "id": 7,
+    "name": "Freelance Proposal Generator",
+    "description": "Create winning freelance proposals with AI.",
+    "price": 6.99,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Custom proposals", "Client targeting", "Editable templates"],
+    "icon": "FaFileSignature"
+  },
+  {
+    "id": 8,
+    "name": "Personal Branding Kit",
+    "description": "Build your personal brand with AI tools.",
+    "price": 29.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Brand strategy", "Social templates", "Content planner"],
+    "icon": "FaUserCircle"
+  }
+]
