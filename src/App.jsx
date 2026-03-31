@@ -6,7 +6,8 @@ import Steps from './components/Steps'
 import Pricing from './components/Pricing'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
-import Modal from './components/modal'
+import Modal from './components/Modal'
+import SectionHeader from './components/SectionHeader'
 
 const getData = async () => {
   const response = await fetch("/digitools-platform/data.json");
@@ -21,8 +22,9 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <Suspense fallback={<p>Loading...</p>}>
-        <Modal dataPromise={dataPromise}/>
+      <SectionHeader />
+      <Suspense fallback={<div className="bg-white flex justify-center items-center py-20"><span className="loading loading-spinner text-neutral"></span></div>}>
+        <Modal dataPromise={dataPromise} />
       </Suspense>
       <Steps />
       <Pricing />
