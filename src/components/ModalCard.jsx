@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const iconMap = {
     FaFileAlt: '📄',
@@ -43,8 +44,18 @@ const ModalCard = ({ item, carts, setCarts }) => {
     const { id, tagType, icon, name, description, price, period, features = [], tag } = item;
 
     const handleAddToCart = () => {
-        setIsAdded(true);
+         setIsAdded(true);
+        // Check if item already exists in cart
+        const itemExists = carts.find(cartItem => cartItem.id === id);
+
+        if (itemExists) {
+            toast.error(`${name} is already in your cart!`);
+            return;
+        }
+
+       
         setCarts([...carts, item]);
+        toast.success(`${name} added to cart!`);
     };
 
     return (

@@ -13,7 +13,7 @@ import Cart from './components/Cart'
 import Tab from './components/Tab';
 
 const getData = async () => {
-  const response = await fetch("/digitools-platform/data.json");
+  const response = await fetch("/data.json");
   return response.json();
 };
 
@@ -27,20 +27,20 @@ function App() {
   //console.log(activeTab);
   const [carts, setCarts] = useState([]);
   //console.log(carts);
-  
+
   return (
     <>
-      <Nav />
+      <Nav carts={carts} />
       <Hero />
       <SectionHeader />
-      <Tab setActiveTab={setActiveTab} />
+      <Tab setActiveTab={setActiveTab} carts={carts} />
 
       {activeTab === 'products' && (
         <Suspense fallback={<div className="bg-white flex justify-center items-center py-20 "><span className="loading loading-spinner text-neutral"></span></div>}>
           <Modal dataPromise={dataPromise} carts={carts} setCarts={setCarts} />
         </Suspense>
       )}
-      {activeTab === 'cart' && <Cart carts={carts}  />}
+      {activeTab === 'cart' && <Cart carts={carts} setCarts={setCarts} />}
 
       <Steps />
       <Pricing />
