@@ -13,7 +13,7 @@ import Cart from './components/Cart'
 import Tab from './components/Tab';
 
 const getData = async () => {
-  const response = await fetch("/digitools-platform/data.json");
+  const response = await fetch("/data.json");
   return response.json();
 };
 

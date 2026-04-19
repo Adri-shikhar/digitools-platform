@@ -56,7 +56,7 @@ const ModalCard = ({ item, carts, setCarts }) => {
        
         setCarts([...carts, item]);
         toast.success(`${name} added to cart!`);
-    };
+    }; 
 
     return (
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col gap-4 relative">

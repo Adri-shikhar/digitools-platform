@@ -1,16 +1,115 @@
-# React + Vite
+# DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React + Vite single-page application for showcasing and purchasing digital tools.
 
-Currently, two official plugins are available:
+## Live Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product browsing from local JSON data
+- Add/remove items in cart
+- Cart total price calculation
+- Checkout action with toast feedback
+- Tab switching between Products and Cart views
+- Additional marketing sections: Hero, Steps, Pricing, Banner, Footer
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- Tailwind CSS 4
+- DaisyUI 5
+- React Toastify
+- ESLint 9
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+digitools-platform/
+├── public/
+│   └── data.json
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Banner.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Modal.jsx
+│   │   ├── ModalCard.jsx
+│   │   ├── Nav.jsx
+│   │   ├── Pricing.jsx
+│   │   ├── SectionHeader.jsx
+│   │   ├── Steps.jsx
+│   │   └── Tab.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Getting Started
+
+### 1. Clone and Enter Project
+
+```bash
+git clone <your-repository-url>
+cd digitools-platform
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Development Server
+
+```bash
+npm run dev
+```
+
+Vite will print a local URL (usually http://localhost:5173).
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+
+## Data Source
+
+Product data is loaded from:
+
+- `public/data.json`
+
+The app fetches it in `src/App.jsx` using:
+
+- `fetch('/data.json')`
+
+## Deployment Notes
+
+The current Vite base path in `vite.config.js` is set to `/`:
+
+```js
+export default defineConfig({
+	base: '/',
+	plugins: [react(), tailwindcss()],
+})
+```
+
+If you deploy to GitHub Pages under a repository path, set:
+
+```js
+base: '/your-repo-name/'
+```
+
+Then run:
+
+```bash
+npm run build
+```
+
+## Author
+
+Assignment project for Programming Hero.
