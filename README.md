@@ -2,6 +2,10 @@
 
 A modern React + Vite single-page application for showcasing and purchasing digital tools.
 
+## Live Link
+
+https://ai-digitoolplatform.netlify.app/
+
 ## Live Features
 
 - Product browsing from local JSON data
